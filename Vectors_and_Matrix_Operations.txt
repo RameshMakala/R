@@ -1,0 +1,175 @@
+
+Combined Vectors:
+
+> x = c(1,2,3)
+> s = c("a","b","c")
+> c(x,s)
+[1] "1" "2" "3" "a" "b" "c"
+> 
+
+
+Vector Arithmetic:
+
+> x <- c(11,222,33,44)
+> y <- c(33,44,77,11)
+> x + y
+[1]  44 266 110  55
+> x - y
+[1] -22 178 -44  33
+> x * y
+[1]  363 9768 2541  484
+> x / y
+[1] 0.3333333 5.0454545 0.4285714 4.0000000
+> 
+
+Vector Index:
+> x[1]
+[1] 11
+> x[2]
+[1] 222
+> x[3]
+[1] 33
+> x[4]
+[1] 44
+
+
+Numeric Index Vector and Range Index:
+ x <- c("one","two","three","four")
+> x[c(2,4)]
+[1] "two"  "four"
+> x[c(2:4)]
+[1] "two"   "three" "four" 
+
+
+Dublicate Indexes:
+> x[c(2,3,3)]
+[1] "two"   "three" "three"
+> 
+
+
+Logical Index Vector:
+
+> x
+[1] "one"   "two"   "three" "four" 
+> L <- c(TRUE,TRUE,FALSE,TRUE);
+> x[L]
+[1] "one"  "two"  "four"
+
+also
+ 
+> x[c(TRUE,TRUE,FALSE,TRUE)]
+[1] "one"  "two"  "four"
+> 
+
+
+MATRICES:
+
+
+> A = matrix(c(1,2,3,4,5,6,7,8,9), nrow = 3, ncol = 3);
+> B = matrix(c(11,22,333,44,55,66,77,88,99), nrow = 3, ncol = 3);
+> A * b
+Error: object 'b' not found
+> A * b
+Error: object 'b' not found
+> A * B
+     [,1] [,2] [,3]
+[1,]   11  176  539
+[2,]   44  275  704
+[3,]  999  396  891
+> A - B
+     [,1] [,2] [,3]
+[1,]  -10  -40  -70
+[2,]  -20  -50  -80
+[3,] -330  -60  -90
+> A
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> B
+     [,1] [,2] [,3]
+[1,]   11   44   77
+[2,]   22   55   88
+[3,]  333   66   99
+> t(A)
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
+> a
+Error: object 'a' not found
+> A
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> A = T(A)
+Error: could not find function "T"
+> A == T(A)
+Error: could not find function "T"
+> A == t(A)
+      [,1]  [,2]  [,3]
+[1,]  TRUE FALSE FALSE
+[2,] FALSE  TRUE FALSE
+[3,] FALSE FALSE  TRUE
+
+
+
+Combining Rows and Columns:
+> A = matrix(c(1,2,3,4,5,6,7,8,9), nrow = 3, ncol = 3);
+> 
+> A
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> c(A)
+[1] 1 2 3 4 5 6 7 8 9
+> x
+[1] "one"   "two"   "three" "four" 
+> A
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> C <- matrix(c(1,2,3), nrow = 3, ncol =1);
+> D <- matrix(c(7,8,9), nrow = 1, ncol = 3);
+> C
+     [,1]
+[1,]    1
+[2,]    2
+[3,]    3
+> D
+     [,1] [,2] [,3]
+[1,]    7    8    9
+> cbind(A,C)
+     [,1] [,2] [,3] [,4]
+[1,]    1    4    7    1
+[2,]    2    5    8    2
+[3,]    3    6    9    3
+> cbind(A,D)
+Error in cbind(A, D) : number of rows of matrices must match (see arg 2)
+> rbind(A,D)
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+[4,]    7    8    9
+> 
+
+
+Deconstruction:
+
+> A
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+> c(A)
+[1] 1 2 3 4 5 6 7 8 9
+
+
+
+
+
+

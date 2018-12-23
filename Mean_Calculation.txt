@@ -1,0 +1,16 @@
+> x = (11,22,33,44);
+Error: unexpected ',' in "x = (11,"
+> x = c(11,22,33,44);
+> x <- c(11,22,33,44);
+> x <- c(11,22,33,44)
+> sum(x);
+[1] 110
+> mean(x)
+[1] 27.5
+> length(l)
+Error: object 'l' not found
+> length(x)
+[1] 4
+> mn = sum(x)/length(x);
+> mn
+[1] 27.5
